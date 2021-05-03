@@ -5,6 +5,7 @@ import colors from 'colors';
 
 import productRoutes from './routes/ProductsRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
 
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
@@ -19,6 +20,7 @@ connectDB();
 //routes
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
