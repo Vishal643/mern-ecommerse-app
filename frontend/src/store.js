@@ -13,6 +13,7 @@ import { cartReducer } from './reducers/cartReducers';
 import {
 	orderCreateReducer,
 	orderDetailsReducer,
+	orderPayReducer,
 } from './reducers/orderReducers';
 
 import {
@@ -32,6 +33,7 @@ const reducer = combineReducers({
 	userUpdateProfile: userUpdateProfileReducer,
 	orderCreate: orderCreateReducer,
 	orderDetails: orderDetailsReducer,
+	orderPay: orderPayReducer,
 });
 
 const cartItemsFromStorage = localStorage.getItem('cartItems')
@@ -41,7 +43,7 @@ const cartItemsFromStorage = localStorage.getItem('cartItems')
 const UserInfoFromStorage = localStorage.getItem('userInfo')
 	? JSON.parse(localStorage.getItem('userInfo'))
 	: null;
-
+	
 const shippingAddressFromStorage = localStorage.getItem('shippingAddress')
 	? JSON.parse(localStorage.getItem('shippingAddress'))
 	: {};
